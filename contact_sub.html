@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <title>Your Page Title</title>
+    <!-- 他のメタタグやスタイルシート、スクリプトなどもここに追加 -->
+</head>
+
+  <style>
+    /* 追加のスタイルをここに追加 */
+    body {
+        margin:150px; /* 左右の余白を20pxに設定 */
+        padding: 0; /* ボディのパディングを0に設定 */
+        background-color: #f0f0f0; /* グレーの背景色 */
+        color: #373C38;
+
+    }
+
+    ul.cf {
+        text-align: right;
+    }
+
+    ul.cf li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    ul.cf li a {
+        color: #373C38;
+        text-decoration: none;
+        font-weight: bold; /* 適宜調整してください */
+    }
+    .socialBtn {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialBtn li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    .socialBtn a {
+        text-decoration: none;
+        margin-bottom: 50px;
+        color: #373C38;
+
+    }
+
+    .instagram-text {
+      font-size: 35px;
+      margin-right: 725px;
+      font-weight: bold; /* 太字にする */
+      text-align: left; /* 左揃えにする */
+      /* display: flex;
+      align-items: center; */
+    }
+
+    .last{
+      text-align: right; /* 左揃えにする */
+    }
+
+    .Form {
+      margin-top: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+      color: #373C38;
+    }
+    @media screen and (max-width: 480px) {
+      .Form {
+        margin-top: 40px;
+      }
+    }
+    .Form-Item {
+      border-top: 1px solid #ddd;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        flex-wrap: wrap;
+      }
+    }
+    .Form-Item:nth-child(5) {
+      border-bottom: 1px solid #ddd;
+    }
+    .Form-Item-Label {
+      width: 100%;
+      max-width: 248px;
+      letter-spacing: 0.05em;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item-Label {
+        max-width: inherit;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+      }
+    }
+    .Form-Item-Label.isMsg {
+      margin-top: 8px;
+      margin-bottom: auto;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item-Label.isMsg {
+        margin-top: 0;
+      }
+    }
+    .Form-Item-Label-Required {
+      border-radius: 6px;
+      margin-right: 8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: 48px;
+      display: inline-block;
+      text-align: center;
+      background: #5bc8ac;
+      color: #fff;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item-Label-Required {
+        border-radius: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        width: 32px;
+        font-size: 10px;
+      }
+    }
+    .Form-Item-Input {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-left: 40px;
+      padding-left: 1em;
+      padding-right: 1em;
+      height: 48px;
+      flex: 1;
+      width: 100%;
+      max-width: 410px;
+      background: #eaedf2;
+      font-size: 18px;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item-Input {
+        margin-left: 0;
+        margin-top: 18px;
+        height: 40px;
+        flex: inherit;
+        font-size: 15px;
+      }
+    }
+    .Form-Item-Textarea {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-left: 40px;
+      padding-left: 1em;
+      padding-right: 1em;
+      height: 216px;
+      flex: 1;
+      width: 100%;
+      max-width: 410px;
+      background: #eaedf2;
+      font-size: 18px;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Item-Textarea {
+        margin-top: 18px;
+        margin-left: 0;
+        height: 200px;
+        flex: inherit;
+        font-size: 15px;
+      }
+    }
+    .Form-Btn {
+      border-radius: 6px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 280px;
+      display: block;
+      letter-spacing: 0.05em;
+      background: #5bc8ac;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      .Form-Btn {
+        margin-top: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 160px;
+        font-size: 16px;
+      }
+    }
+</style>
+<body>
+  <?php
+  mb_language("Japanese");
+  mb_internal_encoding("UTF-8");
+
+  $to = "宛先のメールアドレス@example.com"; // 宛先のメールアドレスを指定
+  $subject = "お問い合わせがありました";
+  
+  $company_name = $_POST['company_name'];
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
+  
+  $content = "会社名: $company_name\n氏名: $name\n電話番号: $phone\nメールアドレス: $email\nお問い合わせ内容:\n$message";
+
+  if (mb_send_mail($to, $subject, $content)) {
+    echo "メールを送信しました";
+  } else {
+    echo "メールの送信に失敗しました";
+  }
+  ?>
+
+<header>
+  <nav>
+  <ul class="socialBtn">
+        <span class="instagram-text"><a href="index.html">YOSHINO</a></span>
+    <li class="last"><a href="https://www.instagram.com/_ms.dct/" target="_blank"><img src="Instagram_Glyph_Black.png" alt="Instagram" width="32" height="32"></a></li>
+  </ul>
+</nav>
+
+
+  <nav>
+      <ul class="cf">
+          <li class="about"><a href="">About</a></li>
+          <li class="works"><a href="">Works</a></li>
+          <li class="blog"><a href="">Blog</a></li>
+          <li class="contact"><a href="">Contact</a></li>
+      </ul>
+</header>
+
+<form method="post" action="mail.php">
+<div class="Form">
+  <div class="Form-Item">
+    <p class="Form-Item-Label">
+      <span class="Form-Item-Label-Required">必須</span>会社名
+    </p>
+    <input type="text" class="Form-Item-Input" name="会社名" placeholder="例）株式会社令和">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+    <input type="text" class="Form-Item-Input" name="氏名" placeholder="例）山田太郎">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+    <input type="text" class="Form-Item-Input" name="電話番号" placeholder="例）000-0000-0000">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+    <input type="email" class="Form-Item-Input" name="メールアドレス" placeholder="例）example@gmail.com">
+  </div>
+  <div class="Form-Item">
+    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+    <textarea class="Form-Item-Textarea"name="お問い合わせ内容"></textarea>
+  </div>
+  <input type="submit" class="Form-Btn" value="送信する">
+</div>
+</form>
+
+</body>

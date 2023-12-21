@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <title>Your Page Title</title>
+    <!-- 他のメタタグやスタイルシート、スクリプトなどもここに追加 -->
+</head>
+
+  <style>
+    /* 追加のスタイルをここに追加 */
+    body {
+        margin:100px; /* 左右の余白を20pxに設定 */
+        padding: 0; /* ボディのパディングを0に設定 */
+        background-color: #f0f0f0; /* グレーの背景色 */
+        color: #373C38;
+    }
+
+    ul.cf {
+        text-align: right;
+    }
+
+    ul.cf li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    ul.cf li a {
+        color: #373C38;
+        text-decoration: none;
+        font-weight: bold; /* 適宜調整してください */
+    }
+    .socialBtn {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialBtn li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    .socialBtn a {
+        /* display: block; */
+        text-decoration: none;
+        margin-bottom: 50px;
+        color: #373C38;
+    }
+
+    .instagram-text {
+      font-size: 35px;
+      margin-right: 1465px;
+      font-weight: bold; /* 太字にする */
+      text-align: left; /* 左揃えにする */
+      color: #373C38;
+      /* display: flex;
+      align-items: center; */
+    }
+
+    .last{
+      text-align: right; /* 左揃えにする */
+    }
+
+/* 他のスタイルの上に追加 */
+.news {
+  padding: 30px 0;
+  background: #f0f0f0;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sub_ttl {
+  font-size: 25px;
+}
+
+/* ニュース記事のCSS */
+.news_list {
+  margin: 0 5%;
+}
+
+.news_list_item {
+  list-style: none; /* マーカーを非表示にする */
+  display: flex; /* フレキシブルボックスとして表示 */
+  /* justify-content: space-between; 要素間のスペースを均等に配置 */
+  align-items: center; /* 垂直方向に中央揃え */
+  /* border-bottom: none;
+  list-style: none; マーカーを非表示にする */
+}
+
+
+.news_list_item a {
+  position: relative;
+  display: flex;
+  align-items: center; /* 要素内の中央揃え */
+}
+
+.news_list_date {
+  font-size: 15px;
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.news_item {
+  background: #808080;
+  border-radius: 14px;
+  width: 6em;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #373C38;
+}
+
+@media screen and (max-width: 1024px) {
+  .news_list_item a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .news_list_item a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .arrow {
+    display: none;
+  }
+  .news_list_item a {
+    padding-right: 0;
+  }
+}
+
+</style>
+<body id="top">
+
+    <!-- header -->
+    <header>
+      <nav>
+      <ul class="socialBtn">
+        <span class="instagram-text"><a href="index.html">YOSHINO</a></span>
+        <li class="last"><a href="https://www.instagram.com/_ms.dct/" target="_blank"><img src="Instagram_Glyph_Black.png" alt="Instagram" width="32" height="32"></a></li>
+      </ul>
+    </nav>
+
+
+      <nav>
+          <ul class="cf">
+              <li class="about"><a href="about.html">About</a></li>
+              <li class="works"><a href="works.html">Works</a></li>
+              <li class="blog"><a href="blog.html">Blog</a></li>
+              <li class="news"><a href="news.html">News</a></li>
+              <li class="contact"><a href="contact.html">Contact</a></li>
+          </ul>
+    </header>
+
+
+<!-- NEWSセクション -->
+<section class="news">
+  <div class="inner">
+    <h2 class="sub_ttl">NEWS</h2>
+
+    <!-- ニュース記事 -->
+    <ul class="news_list">
+      <li class="news_list_item">
+          <div class="news_list_date">
+            <time>2023.12.12</time>
+            <p class="news_item">お知らせ</p>
+          </div>
+            <p><a href="design_1.html" class="link">T.LEADUEの大会の催し物紹介のポスターをデザインしました</a></p>
+      </li>
+      <li class="news_list_item">
+          <div class="news_list_date">
+            <time>2023.11.07</time>
+            <p class="news_item">お知らせ</p>
+          </div>
+          <p><a href="interpretation_2.html" class="link">FESPA2023 国際バスケットボール大会トレーナーチーム通訳を務めました</a></p>
+      </li>
+      <li class="news_list_item">
+        <div class="news_list_date">
+          <time>2023.10.31</time>
+          <p class="news_item">お知らせ</p>
+        </div>
+        <p><a href="lecture_1.html" class="link">タイ研修報告を行いました</a></p>
+    </li>
+    <li class="news_list_item">
+      <div class="news_list_date">
+        <time>2023.09.10</time>
+        <p class="news_item">お知らせ</p>
+      </div>
+      <p><a href="interpretation_1.html" class="link">WORLD DREAM BASEBALL 2023 in NAGOYA アメリカチーム通訳を務めました</a></p>
+  </li>
+</ul>
+  </div>
+</section>
+
+
+</body>
+
+</html>

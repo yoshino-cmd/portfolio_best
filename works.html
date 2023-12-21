@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <title>Your Page Title</title>
+    <!-- 他のメタタグやスタイルシート、スクリプトなどもここに追加 -->
+</head>
+
+  <style>
+    /* 追加のスタイルをここに追加 */
+    body {
+        margin:100px; /* 左右の余白を20pxに設定 */
+        padding: 0; /* ボディのパディングを0に設定 */
+        background-color: #f0f0f0; /* グレーの背景色 */
+        color: #373C38;
+    }
+
+    ul.cf {
+        text-align: right;
+    }
+
+    ul.cf li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    ul.cf li a {
+        color: #373C38;
+        text-decoration: none;
+        font-weight: bold; /* 適宜調整してください */
+    }
+    .socialBtn {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .socialBtn li {
+        display: inline-block;
+        margin-left: 20px; /* 適宜調整してください */
+    }
+
+    .socialBtn a {
+        /* display: block; */
+        text-decoration: none;
+        margin-bottom: 50px;
+        color: #373C38;
+    }
+
+    .instagram-text {
+      font-size: 35px;
+      margin-right: 1465px;
+      font-weight: bold; /* 太字にする */
+      text-align: left; /* 左揃えにする */
+      color: #373C38;
+      /* display: flex;
+      align-items: center; */
+    }
+
+    .last{
+      text-align: right; /* 左揃えにする */
+    }
+
+/* 他のスタイルの上に追加 */
+.works {
+  padding: 30px 0;
+  background: #f0f0f0;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sub_ttl {
+  font-size: 25px;
+}
+
+.content {
+        display: inline-block; /* 横並びにする */
+        flex-basis: calc(33% - 20px);
+        margin-bottom: 5px;
+        text-align: left;
+        /* border: 1px solid #ddd; */
+        padding: 15px;
+        box-sizing: border-box;
+        margin-right: 10px; /* 左右のマージンを適切な値に調整してください */
+        margin-left: 10px;
+        color: #373C38;
+        margin-left: 5px; /* 左のマージンを適切な値に調整してください */
+        margin-right: 5px; /* 右のマージンを適切な値に調整してください */
+    }
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text01 {
+margin-top: 0px; /* 調整したい距離に合わせて変更してください */
+}
+
+</style>
+<body id="top">
+
+    <!-- header -->
+    <header>
+      <nav>
+      <ul class="socialBtn">
+        <span class="instagram-text"><a href="index.html">YOSHINO</a></span>
+        <li class="last"><a href="https://www.instagram.com/_ms.dct/" target="_blank"><img src="Instagram_Glyph_Black.png" alt="Instagram" width="32" height="32"></a></li>
+      </ul>
+    </nav>
+
+
+      <nav>
+          <ul class="cf">
+              <li class="about"><a href="about.html">About</a></li>
+              <li class="works"><a href="works.html">Works</a></li>
+              <li class="blog"><a href="blog.html">Blog</a></li>
+              <li class="news"><a href="news.html">News</a></li>
+              <li class="contact"><a href="contact.html">Contact</a></li>
+          </ul>
+    </header>
+
+    <script>
+      function togglePopup() {
+        const popup = document.getElementById('popup');
+        const textContent = document.getElementById('text-content');
+    
+        if (popup.style.display === 'block') {
+          popup.style.display = 'none';
+          textContent.style.display = 'none';
+        } else {
+          popup.style.display = 'block';
+          textContent.style.display = 'block';
+        }
+      }
+    </script>
+
+
+
+<!-- NEWSセクション -->
+<section class="works">
+  <div class="inner">
+    <h2 class="sub_ttl">Works</h2>
+
+    <h3>Webサイト</h3>
+    <section class="content">
+      <img src="website.png" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">webサイト作成講座<br>春休みに開催予定</br></p>
+    </section>
+
+    <h3>アプリケーション</h3>
+    <section class="content">
+      <img src="application.png" alt="application Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">アプリ作成中<br>coming soon...</br></p>
+    </section>
+
+    <h3>デザイン</h3>
+    <section class="content">
+      <img src="design_1.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">イベントポスター作成</p>
+    </section>
+
+    <h3>通訳</h3>
+    <section class="content">
+      <img src="interpretation.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">第5回世界身体障害者<br>野球大会アメリカチーム通訳</br></p>
+    </section>
+
+    <section class="content">
+      <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">FESPA 2023国際バスケットボール大会<br>トレーナーチーム通訳</br></p>
+    </section>
+
+    <h3>研究</h3>
+    <section class="content">
+      <img src="research.png" alt="research Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">weii-being向上のための研究</p>
+    </section>
+
+    <h3>講演</h3>
+    <section class="content">
+      <img src="lecture_1.png" alt="lecture Icon" width="150" height="150"onclick="togglePopup()">
+      <p class="text01">JICAタイ研修報告<br></br></p>
+    </section>
+
+
+
+
+
+  </section>
+
+</body>
+
+</html>
