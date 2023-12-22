@@ -51,15 +51,44 @@
 
     }
 
-    .instagram-text {
-      font-size: 35px;
-      margin-right: 1360px;
-      font-weight: bold; /* 太字にする */
-      text-align: left; /* 左揃えにする */
-      color: #373C38;
-      /* display: flex;
-      align-items: center; */
-    }
+    ul.socialBtn {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 横に並べるために追加 */
+    align-items: center; /* 垂直方向に中央揃え */
+  }
+
+  ul.socialBtn li {
+    display: inline-block;
+    margin-left: 20px;
+    /* 適宜調整してください */
+  }
+
+  ul.socialBtn li a {
+    color: #373C38;
+    text-decoration: none;
+    font-weight: bold;
+    /* 適宜調整してください */
+  }
+
+  .instagram-text {
+    font-size: 35px;
+    margin-right: auto;
+    font-weight: bold;
+    /* 太字にする */
+    text-align: left;
+    /* 左揃えにする */
+    color: #373C38;
+    /* display: flex;
+    align-items: center; */
+  }
+
+  .socialBtn li.last {
+    margin-left: auto;
+    /* アイコンの右側にテキストを寄せる */
+  }
+
 
     .last{
       text-align: right; /* 左揃えにする */

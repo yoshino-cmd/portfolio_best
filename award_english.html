@@ -1,83 +1,423 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/css/6-1-7.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .card {
-      width: 18%; /* カードの横幅を調整 */
-      border: 1px solid #dee2e6;
-      border-radius: .25rem;
-      margin: 10px; /* カード間のスペースを追加 */
-      display: inline-block;
-      box-sizing: border-box; /* カードのボーダーボックスサイズを調整 */
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: 150px; /* 写真の高さを調整 */
-      object-fit: cover;
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <title>Your Page Title</title>
+    <!-- 他のメタタグやスタイルシート、スクリプトなどもここに追加 -->
 </head>
-<body>
-  <!-- カード 1 -->
-  <div class="card">
-    <img src="osaka.jpg" class="card-img-top" alt="Osaka 1">
-    <div class="card-body">
-      <h5 class="card-title">カード 1 タイトル</h5>
-      <p class="card-text">カードの内容を示すサンプルテキスト。</p>
-      <a href="#" class="btn btn-primary">どこかに移動</a>
-    </div>
-  </div>
 
-  <!-- カード 2 -->
-  <div class="card">
-    <img src="dj.jpg" class="card-img-top" alt="Osaka 2">
-    <div class="card-body">
-      <h5 class="card-title">カード 2 タイトル</h5>
-      <p class="card-text">カードの内容を示すサンプルテキスト。</p>
-      <a href="#" class="btn btn-primary">どこかに移動</a>
-    </div>
-  </div>
+  <style>
+/* 追加のスタイルをここに追加 */
+body {
+    margin:100px; /* 左右の余白を20pxに設定 */
+    padding: 0; /* ボディのパディングを0に設定 */
+    background-color: #f0f0f0; /* グレーの背景色 */
+    color: #373C38;
+}
 
-  <div class="card">
-    <img src="osaka.jpg" class="card-img-top" alt="Osaka 1">
-    <div class="card-body">
-      <h5 class="card-title">カード 1 タイトル</h5>
-      <p class="card-text">カードの内容を示すサンプルテキスト。</p>
-      <a href="#" class="btn btn-primary">どこかに移動</a>
-    </div>
-  </div>
+/* nav{
+  position:absolute;
+  top:0;
+  left:0;
+} */
 
-  <!-- カード 2 -->
-  <div class="card">
-    <img src="dj.jpg" class="card-img-top" alt="Osaka 2">
-    <div class="card-body">
-      <h5 class="card-title">カード 2 タイトル</h5>
-      <p class="card-text">カードの内容を示すサンプルテキスト。</p>
-      <a href="#" class="btn btn-primary">どこかに移動</a>
-    </div>
-  </div>
+ul.cf {
+    text-align: right;
+}
 
-    <!-- カード 2 -->
-    <div class="card">
-      <img src="dj.jpg" class="card-img-top" alt="Osaka 2">
-      <div class="card-body">
-        <h5 class="card-title">カード 2 タイトル</h5>
-        <p class="card-text">カードの内容を示すサンプルテキスト。</p>
-        <a href="#" class="btn btn-primary">どこかに移動</a>
-      </div>
-    </div>
+ul.cf li {
+    display: inline-block;
+    margin-left: 20px; /* 適宜調整してください */
+}
+
+ul.cf li a {
+    color: #373C38;
+    text-decoration: none;
+    font-weight: bold; /* 適宜調整してください */
+}
+.socialBtn {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socialBtn li {
+    display: inline-block;
+    margin-left: 20px; /* 適宜調整してください */
+}
+
+.socialBtn a {
+    /* display: block; */
+    text-decoration: none;
+    margin-bottom: 50px;
+    color: #373C38;
+}
+
+.socialBtn ul {
+display: flex;
+/* justify-content: space-between; */
+align-items: center; /* 垂直方向に中央揃え */
+}
+
+.socialBtn li.last {
+    margin-left: auto; /* アイコンの右側にテキストを寄せる */
+}
+
+.instagram-text {
+  font-size: 35px;
+  margin-right: auto;
+  font-weight: bold; /* 太字にする */
+  text-align: left; /* 左揃えにする */
+  color: #373C38;
+  /* display: flex;
+  align-items: center; */
+}
+
+
+.last{
+  text-align: right; /* 左揃えにする */
+}
+
+/* 他のスタイルの上に追加 */
+.news {
+  padding: 10px 0;
+  background: #f0f0f0;
+}
+
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sub_ttl {
+  font-size: 25px;
+  text-align: center;
+}
+
+/* ニュース記事のCSS */
+.news_list {
+  margin: 0 5%;
+}
+
+.news_list_item {
+  list-style: none; /* マーカーを非表示にする */
+  display: flex; /* フレキシブルボックスとして表示 */
+  /* justify-content: space-between; 要素間のスペースを均等に配置 */
+  align-items: center; /* 垂直方向に中央揃え */
+  /* border-bottom: none;
+  list-style: none; マーカーを非表示にする */
+}
+
+
+.news_list_item a {
+  position: relative;
+  display: flex;
+  align-items: center; /* 要素内の中央揃え */
+}
+
+.news_list_date {
+  font-size: 15px;
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.news_item {
+  background: #808080;
+  border-radius: 14px;
+  width: 6em;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #373C38;
+}
+
+@media screen and (max-width: 1024px) {
+  .news_list_item a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .news_list_item a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .arrow {
+    display: none;
+  }
+  .news_list_item a {
+    padding-right: 0;
+  }
+}
+
+
+/* #main {
+        /* display: flex; */
+        /* justify-content: space-around; */
+/* } */
+
+#service {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        margin-top: 20px;
+    }
+.content {
+    flex-basis: calc(33% - 20px);
+    margin-bottom: 5px;
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    padding: 15px;
+    box-sizing: border-box;
+    margin-right: 10px; /* 左右のマージンを適切な値に調整してください */
+    margin-left: 10px;
+    color: #373C38;
+}
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 画像を中央揃えにするために追加 */
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#popup-content {
+  background: #f0f0f0;
+  padding: 200px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .popup-content .popup-image {
+margin-right: 10px; /* 画像間の余白を設定（適宜調整してください） */
+/* } */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 100px;
+}
+
+</style>
+<body id="top">
+
+    <!-- header -->
+    <header>
+      <nav>
+      <ul class="socialBtn">
+        <span class="instagram-text"><a href="index.html">YOSHINO</a></span>
+        <li class="last"><a href="https://www.instagram.com/_ms.dct/" target="_blank"><img src="Instagram_Glyph_Black.png" alt="Instagram" width="32" height="32"></a></li>
+      </ul>
+    </nav>
+
+
+      <nav>
+          <ul class="cf">
+              <li class="about"><a href="about.html">About</a></li>
+              <li class="works"><a href="works.html">Works</a></li>
+              <li class="blog"><a href="blog.html">Blog</a></li>
+              <li class="news"><a href="news.html">News</a></li>
+              <li class="contact"><a href="contact.html">Contact</a></li>
+          </ul>
+    </header>
+
+<script>
+      function togglePopup(id) {
+        const popup = document.getElementById(`popup-${id}`);
+    
+        if (popup.style.display === 'flex') {
+          popup.style.display = 'none';
+        } else {
+          popup.style.display = 'flex';
+        }
+      }
+</script>
+
+    <!-- 既存のHTMLコードのこの行の上に追加 -->
+
+<!-- NEWSセクション -->
+<section class="news">
+  <div class="inner">
+    <h2 class="sub_ttl">NEWS</h2>
+
+    <!-- ニュース記事 -->
+    <ul class="news_list">
+      <li class="news_list_item">
+          <div class="news_list_date">
+            <time>2023.12.12</time>
+            <p class="news_item">お知らせ</p>
+          </div>
+            <p><a href="design_1.html" class="link">T.LEADUEの大会の催し物紹介のポスターをデザインしました</a></p>
+      </li>
+      <li class="news_list_item">
+          <div class="news_list_date">
+            <time>2023.11.07</time>
+            <p class="news_item">お知らせ</p>
+          </div>
+          <p><a href="interpretation_2.html" class="link">FESPA2023 国際バスケットボール大会トレーナーチーム通訳を務めました</a></p>
+      </li>
+      <!-- 追加のニュース記事をここに続けて追加できます -->
+    </ul>
+  </div>
+</section>
+
+<!-- 既存のHTMLコードのこの行の下に追加 -->
+
+
+    <!-- main -->
+    <div id="main">
+
+        <!-- mainVisual -->
+
+        <!-- service -->
+        <section id="service" class="cf">
+            <!-- <h2 class="ttl">Service</h2> -->
+
+            <section class="content">
+              <h3 class="ttl">Webサイト</h3>
+              <p class="ttl">WEBSITE</p>
+              <img src="website.png" alt="website Icon" width="150" height="150" onclick="togglePopup(1)">
+              <p class="text01">webサイト作成講座<br>春休みに開催予定</br></p>
+              <div id="popup-1" class="popup">
+                <div id="popup-content">
+                  <section class="content">
+                    <img src="website.png" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+                    <p class="text01">webサイト作成講座<br>春休みに開催予定</br></p>
+                  </section>
+                  <div class="close-btn" onclick="togglePopup(1)">×</div>
+                </div>
+              </div>
+            </section>
+            
+            <section class="content">
+                <h3 class="ttl">アプリケーション</h3>
+                <p class="ttl">APPLICATION</p>
+                <img src="application.png" alt="application Icon" width="150" height="150"onclick="togglePopup(2)">
+                <p class="text01">アプリ作成中<br>coming soon...</br></p>
+                <div id="popup-2" class="popup">
+                  <div id="popup-content">
+                    <section class="content">
+                      <img src="application.png" alt="application Icon" width="150" height="150"onclick="togglePopup()">
+                      <p class="text01">アプリ作成中<br>coming soon...</br></p>
+                    </section>
+                    <div class="close-btn" onclick="togglePopup(2)">×</div>
+                  </div>
+                </div>
+              </section>
+
+            <section class="content">
+                <h3 class="ttl">デザイン</h3>
+                <p class="ttl">DESIGN</p>
+                <img src="design.png" alt="design Icon" width="150" height="150"onclick="togglePopup(3)">
+                <p class="text01">イベントポスター作成</p>
+                <div id="popup-3" class="popup">
+                  <div id="popup-content">
+                    <section class="content">
+                      <a href="design_1.html" target="_self">
+                      <img src="design_1.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+                    </a>
+                      <p class="text01">イベントポスター作成</p>
+                    </section>
+                    <div class="close-btn" onclick="togglePopup(3)">×</div>
+                  </div>
+                </div>
+              </section>
+
+
+
+            <section class="content">
+              <h3 class="ttl">通訳</h3>
+              <p class="ttl">INTERPRETATION</p>
+              <img src="interpreter.png" alt="interpreter Icon" width="150" height="150"onclick="togglePopup(4)">
+              <p class="text01">日本語⇔英語の通訳挑戦中！</p>
+              <div id="popup-4" class="popup">
+                <div id="popup-content">
+                  <section class="content">
+                    <a href="interpretation_why.html" target="_self">
+                    <img src="interpretation_why.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
+                    </a>
+                    <p class="text01">なぜ通訳に挑戦しようと思ったの？</br></p>
+                  </section>
+
+                    <section class="content">
+                      <a href="interpretation_2.html" target="_self">
+                      <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
+                      </a>
+                      <p class="text01">FESPA 2023国際バスケットボール大会<br>トレーナーチーム通訳</br></p>
+                    </section>
+
+                    <section class="content">
+                      <a href="interpretation_1.html" target="_self">
+                      <img src="interpretation.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
+                    </a>
+                      <p class="text01">WORLD DREAM BASEBALL 2023 in NAGOYA アメリカチーム通訳</br></p>
+                    </section>
+
+                    <div class="close-btn" onclick="togglePopup(4)">×</div>
+                  </div>
+                </div>
+              </section>
+
+            <section class="content">
+                <h3 class="ttl">研究</h3>
+                <p class="ttl">RESEARCH</p>
+                <img src="research.png" alt="research Icon" width="150" height="150"onclick="togglePopup(5)">
+                <p class="text01">weii-being向上のための研究</p>
+                <div id="popup-5" class="popup">
+                  <div id="popup-content">
+                    <section class="content">
+                      <img src="research.png" alt="research Icon" width="150" height="150"onclick="togglePopup()">
+                      <p class="text01">weii-being向上のための研究</p>
+                    </section>
+                    <div class="close-btn" onclick="togglePopup(5)">×</div>
+                  </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <h3 class="ttl">講演</h3>
+                <p class="ttl">LECTURE</p>
+                <img src="lecture.png" alt="lecture Icon" width="150" height="150"onclick="togglePopup(6)">
+                <p class="text01">研修報告等</p>
+                <div id="popup-6" class="popup">
+                  <div id="popup-content">
+                    <section class="content">
+                      <img src="lecture_1.png" alt="lecture Icon" width="150" height="150"onclick="togglePopup()">
+                      <p class="text01">JICAタイ研修報告<br></br></p>
+                    </section>
+                    <div class="close-btn" onclick="togglePopup(6)">×</div>
+                  </div>
+                </div>
   
-  <!-- カード 3, カード 4, カード 5 -->
-  <!-- 他のカードについても同様のコードを追加 -->
+            </section>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-oJ94T1aG8Lb5ugEK8eTvx2fwOh1BC8GnRdN4yRZNep0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </section>
+    </div>
 </body>
+
 </html>

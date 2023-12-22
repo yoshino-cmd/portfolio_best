@@ -12,7 +12,7 @@
   <style>
     /* 追加のスタイルをここに追加 */
     body {
-        margin:100px; /* 左右の余白を20pxに設定 */
+        margin:150px; /* 左右の余白を20pxに設定 */
         padding: 0; /* ボディのパディングを0に設定 */
         background-color: #f0f0f0; /* グレーの背景色 */
         color: #373C38;
@@ -50,15 +50,44 @@
         color: #373C38;
     }
 
-    .instagram-text {
-      font-size: 35px;
-      margin-right: 1465px;
-      font-weight: bold; /* 太字にする */
-      text-align: left; /* 左揃えにする */
-      color: #373C38;
-      /* display: flex;
-      align-items: center; */
-    }
+    ul.socialBtn {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 横に並べるために追加 */
+    align-items: center; /* 垂直方向に中央揃え */
+  }
+
+  ul.socialBtn li {
+    display: inline-block;
+    margin-left: 20px;
+    /* 適宜調整してください */
+  }
+
+  ul.socialBtn li a {
+    color: #373C38;
+    text-decoration: none;
+    font-weight: bold;
+    /* 適宜調整してください */
+  }
+
+  .instagram-text {
+    font-size: 35px;
+    margin-right: auto;
+    font-weight: bold;
+    /* 太字にする */
+    text-align: left;
+    /* 左揃えにする */
+    color: #373C38;
+    /* display: flex;
+    align-items: center; */
+  }
+
+  .socialBtn li.last {
+    margin-left: auto;
+    /* アイコンの右側にテキストを寄せる */
+  }
+
     
     .last{
       text-align: right; /* 左揃えにする */
