@@ -197,26 +197,77 @@ ul.socialBtn {
   color: #373C38;
 }
 
-@media screen and (max-width: 1024px) {
-  .news_list_item a {
+/* 既存のスタイル */
+
+/* スマートフォン用のスタイル */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 20px;
+  }
+
+  ul.cf {
+    text-align: left;
+  }
+
+  ul.cf li {
     display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  ul.socialBtn {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  ul.socialBtn li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .instagram-text {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .news_list_item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news_list_date {
+    margin-bottom: 10px;
+  }
+
+  .news_item {
+    margin-top: 10px;
+  }
+
+  #service .content {
+    flex-basis: calc(100% - 20px);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .popup {
+    align-items: flex-start;
+  }
+
+  #popup-content {
+    padding: 20px;
+  }
+
+  #popup-content section.content {
+    margin-right: 0;
+  }
+
+  .close-btn {
+    left: 10px;
   }
 }
 
-@media screen and (max-width: 769px) {
-  .news_list_item a {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .arrow {
-    display: none;
-  }
-  .news_list_item a {
-    padding-right: 0;
-  }
-}
 
 
 /* #main {
@@ -270,17 +321,36 @@ ul.socialBtn {
   flex-direction: row;
 }
 
-/* .popup-content .popup-image {
-margin-right: 10px; /* 画像間の余白を設定（適宜調整してください） */
-/* } */
+#popup-content section.content {
+  flex: 1; /* すべてのポップアップが同じ幅になるように */
+  margin-right: 20px; /* 適切なマージンに調整 */
+}
+
+#popup-content section.content img {
+  width: 200px; /* 画像の幅を指定 */
+  height: 200px; /* 画像の高さを指定 */
+  object-fit: cover; /* アスペクト比を維持して指定したサイズに収める */
+}
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  right:70px;
   cursor: pointer;
-  font-size: 100px;
+  font-size: 50px;
 }
+
+.text01 {
+  margin-top: 10px; /* 適切なマージンに調整 */
+  text-align: center; /* 中央揃えに設定 */
+}
+
+.text02 {
+  width: 200px; /* text01の横幅を100%に設定 */
+  margin-top: 10px; /* 適切なマージンに調整 */
+  text-align: center; /* 中央揃えに設定 */
+}
+
+
 
 </style>
 <body id="top">
@@ -366,7 +436,7 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
                 <div id="popup-content">
                   <section class="content">
                     <img src="website.png" alt="website Icon" width="150" height="150"onclick="togglePopup()">
-                    <p class="text01">webサイト作成講座<br>春休みに開催予定</br></p>
+                    <p class="text02">webサイト作成講座<br>春休みに開催予定</br></p>
                   </section>
                   <div class="close-btn" onclick="togglePopup(1)">×</div>
                 </div>
@@ -383,7 +453,7 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
                   <div id="popup-content">
                     <section class="content">
                       <img src="application.png" alt="application Icon" width="150" height="150"onclick="togglePopup()">
-                      <p class="text01">アプリ作成中<br>coming soon...</br></p>
+                      <p class="text02">アプリ作成中<br>coming soon...</br></p>
                     </section>
                     <div class="close-btn" onclick="togglePopup(2)">×</div>
                   </div>
@@ -401,7 +471,7 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
                       <a href="design_1.html" target="_self">
                       <img src="design_1.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
                     </a>
-                      <p class="text01">イベントポスター作成</p>
+                      <p class="text02">イベントポスター作成</p>
                     </section>
                     <div class="close-btn" onclick="togglePopup(3)">×</div>
                   </div>
@@ -410,38 +480,38 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
 
 
 
+<section class="content">
+    <h3 class="ttl">通訳</h3>
+    <p class="ttl">INTERPRETATION</p>
+    <img src="interpreter.png" alt="interpreter Icon" width="150" height="150" onclick="togglePopup(4)">
+    <p class="text01">日本語⇔英語の通訳挑戦中！</p>
+    <div id="popup-4" class="popup">
+        <div id="popup-content">
             <section class="content">
-              <h3 class="ttl">通訳</h3>
-              <p class="ttl">INTERPRETATION</p>
-              <img src="interpreter.png" alt="interpreter Icon" width="150" height="150"onclick="togglePopup(4)">
-              <p class="text01">日本語⇔英語の通訳挑戦中！</p>
-              <div id="popup-4" class="popup">
-                <div id="popup-content">
-                  <section class="content">
-                    <a href="interpretation_why.html" target="_self">
-                    <img src="interpretation_why.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
-                    </a>
-                    <p class="text01">なぜ通訳に挑戦しようと思ったの？</br></p>
-                  </section>
+                <a href="interpretation_why.html" target="_self">
+                    <img src="interpretation_why.jpg" alt="website Icon" width="150" height="150" onclick="togglePopup()" class="popup-image">
+                </a>
+                <p class="text02">私の軌跡<br>～通訳に挑戦するまで～</p>
+            </section>
 
-                    <section class="content">
-                      <a href="interpretation_2.html" target="_self">
-                      <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
-                      </a>
-                      <p class="text01">FESPA 2023国際バスケットボール大会<br>トレーナーチーム通訳</br></p>
-                    </section>
+            <section class="content">
+                <a href="interpretation_2.html" target="_self">
+                    <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150" onclick="togglePopup()" class="popup-image">
+                </a>
+                <p class="text02">2023/11/07<br>トレーナーチーム通訳</p>
+            </section>
 
-                    <section class="content">
-                      <a href="interpretation_1.html" target="_self">
-                      <img src="interpretation.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()"class="popup-image">
-                    </a>
-                      <p class="text01">WORLD DREAM BASEBALL 2023 in NAGOYA アメリカチーム通訳</br></p>
-                    </section>
+            <section class="content">
+                <a href="interpretation_1.html" target="_self">
+                    <img src="interpretation.jpg" alt="website Icon" width="150" height="150" onclick="togglePopup()" class="popup-image">
+                </a>
+                <p class="text02">2023/09/10<br>アメリカチーム通訳</p>
+            </section>
 
-                    <div class="close-btn" onclick="togglePopup(4)">×</div>
-                  </div>
-                </div>
-              </section>
+            <div class="close-btn" onclick="togglePopup(4)">×</div>
+        </div>
+    </div>
+</section>
 
             <section class="content">
                 <h3 class="ttl">研究</h3>
@@ -452,7 +522,7 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
                   <div id="popup-content">
                     <section class="content">
                       <img src="research.png" alt="research Icon" width="150" height="150"onclick="togglePopup()">
-                      <p class="text01">weii-being向上のための研究</p>
+                      <p class="text02">weii-being向上のための研究</p>
                     </section>
                     <div class="close-btn" onclick="togglePopup(5)">×</div>
                   </div>
@@ -468,7 +538,7 @@ margin-right: 10px; /* 画像間の余白を設定（適宜調整してくださ
                   <div id="popup-content">
                     <section class="content">
                       <img src="lecture_1.png" alt="lecture Icon" width="150" height="150"onclick="togglePopup()">
-                      <p class="text01">JICAタイ研修報告<br></br></p>
+                      <p class="text02">JICAタイ研修報告<br></br></p>
                     </section>
                     <div class="close-btn" onclick="togglePopup(6)">×</div>
                   </div>
