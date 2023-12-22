@@ -96,6 +96,8 @@
 .works {
   padding: 30px 0;
   background: #f0f0f0;
+  display: flex; /* .inner内の要素を横並びに */
+  flex-wrap: wrap; /* 要素がはみ出した場合に次の行に折り返す */
 }
 
 .inner {
@@ -110,7 +112,7 @@
 .content {
         display: inline-block; /* 横並びにする */
         flex-basis: calc(33% - 20px);
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         text-align: left;
         /* border: 1px solid #ddd; */
         padding: 15px;
@@ -121,13 +123,17 @@
         margin-left: 5px; /* 左のマージンを適切な値に調整してください */
         margin-right: 5px; /* 右のマージンを適切な値に調整してください */
     }
+
 .content img {
-    max-width: 100%;
-    height: auto;
+  width: 200px; /* 画像の幅を指定 */
+  height: 200px; /* 画像の高さを指定 */
+  object-fit: cover; /* アスペクト比を維持して指定したサイズに収める */
 }
 
 .text01 {
-margin-top: 0px; /* 調整したい距離に合わせて変更してください */
+  width: 200px; /* text01の横幅を100%に設定 */
+  margin-top: 10px; /* 適切なマージンに調整 */
+  text-align: center; /* 中央揃えに設定 */
 }
 
 </style>
@@ -153,20 +159,6 @@ margin-top: 0px; /* 調整したい距離に合わせて変更してください
           </ul>
     </header>
 
-    <script>
-      function togglePopup() {
-        const popup = document.getElementById('popup');
-        const textContent = document.getElementById('text-content');
-    
-        if (popup.style.display === 'block') {
-          popup.style.display = 'none';
-          textContent.style.display = 'none';
-        } else {
-          popup.style.display = 'block';
-          textContent.style.display = 'block';
-        }
-      }
-    </script>
 
 
 
@@ -177,20 +169,20 @@ margin-top: 0px; /* 調整したい距離に合わせて変更してください
 
     <h3>Webサイト</h3>
     <section class="content">
-      <img src="website.png" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="website.png" alt="website Icon" width="150" height="150">
       <p class="text01">webサイト作成講座<br>春休みに開催予定</br></p>
     </section>
 
     <h3>アプリケーション</h3>
     <section class="content">
-      <img src="application.png" alt="application Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="application.png" alt="application Icon" width="150" height="150">
       <p class="text01">アプリ作成中<br>coming soon...</br></p>
     </section>
 
     <h3>デザイン</h3>
     <section class="content">
       <a href="design_1.html" target="_self">
-      <img src="design_1.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="design_1.jpg" alt="website Icon" width="150" height="150">
       </a>
       <p class="text01">イベントポスター作成</p>
     </section>
@@ -199,36 +191,37 @@ margin-top: 0px; /* 調整したい距離に合わせて変更してください
 
     <section class="content">
       <a href="interpretation_why.html" target="_self">
-      <img src="interpretation_why.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="interpretation_why.jpg" alt="website Icon" width="150" height="150">
       </a>
-      <p class="text01">なぜ通訳に挑戦しようと思ったの？</p>
+      <p class="text01">私の軌跡<br>～通訳に挑戦するまで～</br></p>
     </section>
 
-
-    <section class="content">
-      <a href="interpretation_1.html" target="_self">
-      <img src="interpretation.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
-      </a>
-      <p class="text01">WORLD DREAM BASEBALL 2023 in NAGOYA<br>アメリカチーム通訳</br></p>
-    </section>
 
     <section class="content">
       <a href="interpretation_2.html" target="_self">
-      <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="interpretation_2.jpg" alt="website Icon" width="150" height="150">
       </a>
-      <p class="text01">FESPA 2023国際バスケットボール大会<br>トレーナーチーム通訳</br></p>
+      <p class="text01">2023/11/07<br>トレーナーチーム通訳</br></p>
     </section>
+
+    <section class="content">
+      <a href="interpretation_1.html" target="_self">
+      <img src="interpretation.jpg" alt="website Icon" width="150" height="150">
+      </a>
+      <p class="text01">2023/09/10<br>アメリカチーム通訳</br></p>
+    </section>
+
 
     <h3>研究</h3>
     <section class="content">
-      <img src="research.png" alt="research Icon" width="150" height="150"onclick="togglePopup()">
-      <p class="text01">weii-being向上のための研究</p>
+      <img src="research.png" alt="research Icon" width="150" height="150">
+      <p class="text01">weii-being向上の研究</p>
     </section>
 
     <h3>講演</h3>
     <section class="content">
       <a href="lecture_1.html" target="_self">
-      <img src="lecture_1.png" alt="lecture Icon" width="150" height="150"onclick="togglePopup()">
+      <img src="lecture_1.png" alt="lecture Icon" width="150" height="150">
       </a>
       <p class="text01">JICAタイ研修報告<br></br></p>
     </section>
