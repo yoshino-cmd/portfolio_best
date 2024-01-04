@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon2.png" type="image/x-icon">
-    <title>Yoshino news</title>
+    <title>Yoshino event</title>
     <!-- 他のメタタグやスタイルシート、スクリプトなどもここに追加 -->
 </head>
 
@@ -50,7 +50,6 @@
         color: #373C38;
     }
 
-
     ul.socialBtn {
     list-style: none;
     padding: 0;
@@ -94,7 +93,7 @@
     }
 
 /* 他のスタイルの上に追加 */
-.news {
+.event_1 {
   padding: 30px 0;
   background: #f0f0f0;
 }
@@ -108,95 +107,35 @@
   font-size: 25px;
 }
 
-/* ニュース記事のCSS */
-.news_list {
-  margin: 0 5%;
-}
-
-.news_list_item {
-  list-style: none; /* マーカーを非表示にする */
-  display: flex; /* フレキシブルボックスとして表示 */
-  /* justify-content: space-between; 要素間のスペースを均等に配置 */
-  align-items: center; /* 垂直方向に中央揃え */
-  /* border-bottom: none;
-  list-style: none; マーカーを非表示にする */
-}
-
-
-.news_list_item a {
-  position: relative;
-  display: flex;
-  align-items: center; /* 要素内の中央揃え */
-}
-
-.news_list_date {
-  font-size: 15px;
-  display: flex;
-  margin-right: 15px;
-  align-items: center;
-}
-
-.news_item {
-  background: #808080;
-  border-radius: 14px;
-  width: 6em;
-  text-align: center;
-  margin-left: 20px;
-}
-
-.website{
-  background:#465DAA;
-}
-
-.application{
-  background:#84C98B;
-}
-
-.design{
-  background: #BC9C78;
-}
-
-.interpretation{
-  background: #FCBB76;
-}
-
-.research{
-  background: #9B95C9;
-}
-
-.lecture{
-  background: #F9C1CF;
-}
-
-.event{
-  background:#7fffd4;
-}
-
-.link {
-  text-decoration: none;
-  color: #373C38;
-}
-
-@media screen and (max-width: 1024px) {
-  .news_list_item a {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .news_list_item a {
-    font-size: 14px;
-  }
+.event_1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
 }
 
 @media screen and (max-width: 480px) {
-  .arrow {
-    display: none;
-  }
-  .news_list_item a {
-    padding-right: 0;
-  }
-}
+      body {
+        margin: 10px;
+      }
+
+      ul.cf li,
+      ul.socialBtn li {
+        margin-left: 10px;
+      }
+
+      .inner {
+        width: 90%;
+      }
+
+      .sub_ttl {
+        font-size: 20px;
+      }
+
+      .event_1 img {
+        margin: 10px 0;
+      }
+    }
 </style>
 <body id="top">
 
@@ -222,49 +161,32 @@
 
 
 <!-- NEWSセクション -->
-<section class="news">
+<section class="event_1">
   <div class="inner">
-    <h2 class="sub_ttl">NEWS</h2>
+    <h2 class="sub_ttl">YOASOBI18祭に出演しました</h2>
 
     <!-- ニュース記事 -->
-    <ul class="news_list">
-      <li class="news_list_item">
-        <div class="news_list_date">
-          <time>2023.01.04</time>
-          <p class="news_item event">イベント</p>
-        </div>
-          <p><a href="event_1.html" class="link">YOASOBI18祭に出演しました</a></p>
-    </li>
-      <li class="news_list_item">
-          <div class="news_list_date">
-            <time>2023.12.12</time>
-            <p class="news_item design">デザイン</p>
-          </div>
-            <p><a href="design_1.html" class="link">T.LEADUEの大会の催し物紹介のポスターをデザインしました</a></p>
-      </li>
-      <li class="news_list_item">
-          <div class="news_list_date">
-            <time>2023.11.07</time>
-            <p class="news_item interpretation">通訳</p>
-          </div>
-          <p><a href="interpretation_2.html" class="link">FESPA2023 国際バスケットボール大会トレーナーチーム通訳を務めました</a></p>
-      </li>
-      <li class="news_list_item">
-        <div class="news_list_date">
-          <time>2023.10.31</time>
-          <p class="news_item lecture">講演</p>
-        </div>
-        <p><a href="lecture_1.html" class="link">タイ研修報告を行いました</a></p>
-    </li>
-    <li class="news_list_item">
-      <div class="news_list_date">
-        <time>2023.09.10</time>
-        <p class="news_item interpretation">通訳</p>
-      </div>
-      <p><a href="interpretation_1.html" class="link">WORLD DREAM BASEBALL 2023 in NAGOYA アメリカチーム通訳を務めました</a></p>
-  </li>
-</ul>
-  </div>
+    <img src="event_1.jpg">
+    <h3>概要</h3>
+    <p>
+        YOASOBI 18祭<br></br>
+        再放送予定日:1月8日<br></br>
+        時間：NHK総合 午後4:40～(75分)<br></br>
+        アーティストと動画審査を通過した18歳世代の仲間1,000人が作る一夜限りの奇跡のステージ。
+    </p>
+    <!-- <h3>内容</h3>
+        アメリカチームの通訳を務めました。私の他にも英語通訳が５人ほどいらっしゃいました。アメリカから帯同している通訳兼チームマネージャーの方もおられたのでさほど困ることはありませんでした。
+        通訳とはいえ、マイクを使っての会場アナウンスではなくチームの一員になってゲームを楽しむというのが求められました。
+        初めての体験としては最適でした。トレーナーの方のストレッチ動作の動きを英語で伝えるのが難しかったです。
+        私が体験した通訳では日給5000円でした。遠方から参加したので交通費が往復1万円以上かかったので実質5000円ほどの支出でしたが、その価値がある、通訳体験でより英会話が大好きになりました。
+        
+    <h3>まとめ</h3>
+        新しい挑戦を初めて本当に良かったと思います。
+        なかなか通訳をお仕事にしていない人が挑戦できることはとても少ないので興味ある方は是非行動してみてください。
+        きっと新しい自分に出会えます！！
+      </p> -->
+  
+    </div>
 </section>
 
 
